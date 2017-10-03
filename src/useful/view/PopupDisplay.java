@@ -2,6 +2,11 @@ package useful.view;
 
 import javax.swing.JOptionPane;
 
+/**
+ * The popup display class for CTEC Am Session 2017
+ * @author Amber Bullough
+ *@version 01.3.10.2017
+ */
 public class PopupDisplay 
 {
 	/**
