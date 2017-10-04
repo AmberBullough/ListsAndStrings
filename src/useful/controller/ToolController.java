@@ -23,12 +23,13 @@ public class ToolController
 		donutList.add(temp);
 		// Putting in the first lie of these two removed the error in the second line 
 		fillTheList();
+		showTheList();
 	}
 	private void showTheList()
 	{
 		for(int index = 0; index < donutList.size(); index += 1)
 		{
-			
+			display.displayText(donutList.get(index));
 		}
 	}
 	private void fillTheList()
