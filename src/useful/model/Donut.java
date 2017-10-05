@@ -27,11 +27,22 @@ public class Donut
 		String description = "This donut is a " + flavor + " donut.";
 		return description;
 	}
-	//public Donut(String shape)
-	//{
-	//	this();
-	//	this.shape = shape;
-	//}
+	
+	public String getShape()
+	{
+		return shape;
+	}
+	
+	public void setShape(String shape)
+	{
+		this.shape = shape;
+	}
+	
+	public String getFlavor()
+	{
+		return flavor;
+	}
+	
 	//public Donut(boolean isGlazed)
 	//{
 	//	this();
