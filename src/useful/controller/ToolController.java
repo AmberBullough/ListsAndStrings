@@ -27,8 +27,27 @@ public class ToolController
 	}
 	private void showTheList()
 	{
+		String favorite = "Apple Fritter";
 		for(int index = 0; index < donutList.size(); index += 1)
 		{
+			String currentFlavor = donutList.get(index).getFlavor();
+			
+			Donut currentDonut= donutList.get(index);
+			String flavor = currentDonut.getFlavor();
+			
+			if(currentFlavor.equals(favorite))
+			{
+				for(int woop = 0; woop <5; woop += 1)
+				{
+					display.displayText("The Best Flavor EVER!");
+				}
+			}
+			
+			for(int currentLetterIndex = 0; currentLetterIndex < currentFlavor.length(); currentLetterIndex += 1)
+			{
+				display.displayText(currentFlavor.substring(currentLetterIndex,  currentLetterIndex + 1));
+			}
+			
 			display.displayText(donutList.get(index).toString());
 		}
 	}

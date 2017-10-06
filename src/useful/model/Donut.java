@@ -10,7 +10,7 @@ public class Donut
 	
 	public Donut()
 	{
-		this.flavor = "plain";
+		this.flavor = "Plain";
 		this.shape = "round";
 		this.holeCount = 1;
 		this.hasSprinkles = false;
