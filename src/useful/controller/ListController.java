@@ -79,6 +79,7 @@ public class ListController
 	
 	private void changeTheList()
 	{
+		display.displayText("The flavors in the list are: " + donutList);
 		display.displayText("The list is this big: " + donutList.size());
 		Donut removed = donutList.remove(0);
 		display.displayText(removed.getFlavor() + " was removed from the list.");
@@ -123,6 +124,8 @@ public class ListController
 		donutList.add(1, apple);
 		display.displayText("The flavors in the list are: " + donutList);
 		display.displayText("Oh dear. A badger ate all the donuts.");
+		donutList.clear();
+		display.displayText("The flavors in the list are: " + donutList);
 		display.displayText("Goodbye!");
 	}
 	
