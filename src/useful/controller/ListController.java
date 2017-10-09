@@ -5,14 +5,14 @@ import java.util.ArrayList;
 import useful.model.Donut;
 import useful.view.PopupDisplay;
 
-public class ToolController 
+public class ListController 
 {
 	private List<Donut> donutList;
 	//Adds in the list
 	
 	private PopupDisplay display;
 	
-	public ToolController()
+	public ListController()
 	{
 		donutList = new ArrayList<Donut>();
 		display = new PopupDisplay();
@@ -119,4 +119,15 @@ public class ToolController
 		display.displayText("The donut with flavor " + removed.getFlavor() + " has been removed.");
 			
 	}
+	
+	public ArrayList<Donut> getDonutList()
+	{
+		return(ArrayList<Donut>) donutList;
+	}
+	
+	public PopupDisplay getDisplay()
+	{
+		return display;
+	}
+	
 }
