@@ -9,6 +9,7 @@ public class ToolController
 {
 	private List<Donut> donutList;
 	//Adds in the list
+	
 	private PopupDisplay display;
 	
 	public ToolController()
@@ -17,14 +18,17 @@ public class ToolController
 		display = new PopupDisplay();
 	}
 	//Added in the array list.
+	
 	public void start ()
 	{
 		Donut temp = new Donut();
 		donutList.add(temp);
 		// Putting in the first lie of these two removed the error in the second line 
 		fillTheList();
-		showTheList();
+		//showTheList();
+		//Took out show the list
 	}
+	
 	private void showTheList()
 	{
 		String favorite = "Apple Fritter";
@@ -51,6 +55,7 @@ public class ToolController
 			display.displayText(donutList.get(index).toString());
 		}
 	}
+	
 	private void fillTheList()
 	{
 		Donut jellyFilled = new Donut("Jelly filled");
@@ -68,5 +73,13 @@ public class ToolController
 		//Donut circle = new Donut ("Circle");
 		//Donut isGlazed = new Donut (true);
 		//Donut holeCount = new Donut (0);
+	}
+	
+	private void changeTheList()
+	{
+		display.displayText("The list is this big: " + donutList.size());
+		Donut removed = donutList.remove(0);
+		display.displayText(removed.getFlavor() + " was removed from the list.");
+		display.displayText("Now it is this big: " + donutList.size());
 	}
 }
