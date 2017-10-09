@@ -27,6 +27,7 @@ public class ToolController
 		fillTheList();
 		//showTheList();
 		//Took out show the list
+		changeTheList();
 	}
 	
 	private void showTheList()
@@ -81,5 +82,10 @@ public class ToolController
 		Donut removed = donutList.remove(0);
 		display.displayText(removed.getFlavor() + " was removed from the list.");
 		display.displayText("Now it is this big: " + donutList.size());
+		donutList.add(removed);
+		
+		display.displayText("The list is still contains: " + donutList.size() + " items.");
+		removed = donutList.set(3, new Donut());
+		display.displayText("The donut with flavor " + removed.getFlavor() + " has been removed.");
 	}
 }
