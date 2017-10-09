@@ -121,7 +121,9 @@ public class ListController
 		Donut apple = new Donut("Apple Fritter");
 		display.displayText("OH! What is this? " + "This is not a normal donut! " + apple);
 		donutList.add(1, apple);
-			
+		display.displayText("The flavors in the list are: " + donutList);
+		display.displayText("Oh dear. A badger ate all the donuts.");
+		display.displayText("Goodbye!");
 	}
 	
 	public ArrayList<Donut> getDonutList()
