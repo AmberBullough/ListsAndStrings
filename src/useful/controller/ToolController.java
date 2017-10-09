@@ -28,6 +28,7 @@ public class ToolController
 		//showTheList();
 		//Took out show the list
 		changeTheList();
+		practiceWithList();
 	}
 	
 	private void showTheList()
@@ -87,5 +88,35 @@ public class ToolController
 		display.displayText("The list is still contains: " + donutList.size() + " items.");
 		removed = donutList.set(3, new Donut());
 		display.displayText("The donut with flavor " + removed.getFlavor() + " has been removed.");
+		
+	}
+	private void practiceWithList()
+	{
+		String fallFlavor = "Pumpkin";
+		for(int index = 0; index < donutList.size(); index += 1)
+		{
+			String flavor = donutList.get(index).getFlavor();
+			Donut happyFlavor = donutList.get(index);
+			String goodFlavor = happyFlavor.getFlavor();
+			display.displayText("The flavors in the list are: " + happyFlavor.getFlavor());
+			
+			
+			if(happyFlavor.equals(fallFlavor));
+			{
+				for (int woop = 0; woop < 3; woop +=1)
+				{
+					display.displayText("I love " + fallFlavor + " donuts with cream cheese frosting!");
+				}
+				display.displayText(donutList.get(index).toString());
+			}
+		}	
+		donutList.add(new Donut("pumpkin"));
+		display.displayText("New donut in list is: " + fallFlavor);
+		Donut removed = donutList.remove(3);
+		donutList.add(removed);
+		display.displayText("The list is still contains: " + donutList.size() + " items.");
+		removed = donutList.set(3, new Donut());
+		display.displayText("The donut with flavor " + removed.getFlavor() + " has been removed.");
+			
 	}
 }
