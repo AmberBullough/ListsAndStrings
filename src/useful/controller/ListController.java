@@ -117,6 +117,10 @@ public class ListController
 		display.displayText("The list is still contains: " + donutList.size() + " items.");
 		removed = donutList.set(3, new Donut());
 		display.displayText("The donut with flavor " + removed.getFlavor() + " has been removed.");
+		display.displayText("The flavors in the list are: " + donutList);
+		Donut apple = new Donut("Apple Fritter");
+		display.displayText("OH! What is this? " + "This is not a normal donut! " + apple);
+		donutList.add(1, apple);
 			
 	}
 	
