@@ -163,4 +163,21 @@ public class ListController
 		}
 	return max;
 	}
-}
+	public String getLongestString(ArrayList<String> donutList)
+	{
+		String longest = "";
+		int max = 0;
+		
+		for (int index = 0; index < donutList.size(); index += 1)
+		{
+			if (donutList.get(index).length() > max)
+			{
+				max = donutList.get(index).length();
+				longest = donutList.get(index);
+			}
+		}
+		return longest;
+			}
+		
+	}
+
