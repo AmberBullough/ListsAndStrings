@@ -86,11 +86,21 @@ public class ListController
 		display.displayText("Now it is this big: " + donutList.size());
 		donutList.add(removed);
 		
+		
 		display.displayText("The list is still contains: " + donutList.size() + " items.");
 		removed = donutList.set(3, new Donut());
 		display.displayText("The donut with flavor " + removed.getFlavor() + " has been removed.");
 		
 	}
+	
+	private void backwasLoopDemo()
+	{
+		for (int index = donutList.size() - 1; index >= 0; index -= 1)
+		{
+			display.displayText(donutList.get(index).getFlavor());
+		}
+	}
+	
 	private void practiceWithList()
 	{
 		String fallFlavor = "Pumpkin";
