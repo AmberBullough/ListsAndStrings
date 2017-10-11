@@ -149,4 +149,18 @@ public class ListController
 		return display;
 	}
 	
+	public int maxLength(ArrayList<String> donutList)
+	{
+		int max = 0;
+		
+		for (int index = 0 ; index < donutList.size(); index +=1)
+		{
+			if (max < donutList.get(index).length())
+			{
+				max = donutList.get(index).length();
+			}
+			
+		}
+	return max;
+	}
 }
