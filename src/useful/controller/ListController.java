@@ -22,6 +22,11 @@ public class ListController
 	public void start ()
 	{
 		Donut temp = new Donut();
+		ArrayList<String> templist = new ArrayList<String>();
+		tempList.add("This is a word Sequence");
+		tempList.add("DonutTests.zip");
+		tempList.add("My name is Ini Montoya. You have killed my father. Prepare to die");
+		display.displayText("");
 		donutList.add(temp);
 		// Putting in the first lie of these two removed the error in the second line 
 		fillTheList();
@@ -29,6 +34,7 @@ public class ListController
 		//Took out show the list
 		changeTheList();
 		practiceWithList();
+		
 	}
 	
 	private void showTheList()
