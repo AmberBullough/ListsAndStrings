@@ -16,16 +16,20 @@ public class ListController
 	{
 		donutList = new ArrayList<Donut>();
 		display = new PopupDisplay();
+		
 	}
 	//Added in the array list.
 	
 	public void start ()
 	{
 		Donut temp = new Donut();
-		ArrayList<String> templist = new ArrayList<String>();
+		ArrayList<String> tempList = new ArrayList<String>();
 		tempList.add("This is a word Sequence");
 		tempList.add("DonutTests.zip");
 		tempList.add("My name is Ini Montoya. You have killed my father. Prepare to die");
+		display.displayText("The longest string in the templist is : " + maxLength(tempList) + " long");
+		display.displayText("It is : " + longestString(tempList));
+		
 		display.displayText("");
 		donutList.add(temp);
 		// Putting in the first lie of these two removed the error in the second line 
@@ -155,35 +159,36 @@ public class ListController
 		return display;
 	}
 	
-	public int maxLength(ArrayList<String> donutList)
+	public int maxLength(ArrayList<String> tempList)
 	{
 		int max = 0;
 		
-		for (int index = 0 ; index < donutList.size(); index +=1)
+		for (int index = 0 ; index < tempList.size(); index +=1)
 		{
-			if (max < donutList.get(index).length())
+			if (max < tempList.get(index).length())
 			{
-				max = donutList.get(index).length();
+				max = tempList.get(index).length();
 			}
 			
 		}
 	return max;
 	}
-	public String getLongestString(ArrayList<String> donutList)
+	public String longestString(ArrayList<String> tempList)
 	{
 		String longest = "";
 		int max = 0;
 		
-		for (int index = 0; index < donutList.size(); index += 1)
+		for (int index = 0; index < tempList.size(); index += 1)
 		{
-			if (donutList.get(index).length() > max)
+			if (tempList.get(index).length() > max)
 			{
-				max = donutList.get(index).length();
-				longest = donutList.get(index);
+				max = tempList.get(index).length();
+				longest = tempList.get(index);
 			}
 		}
 		return longest;
 			}
+
 		
 	}
 
